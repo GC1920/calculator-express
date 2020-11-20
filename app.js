@@ -20,11 +20,29 @@ app.get("/sum", (req, res) => {
   res.send("Result: " + result)
 })
 
+app.get("/sub", (req, res) => {
+  
+  let number1 = parseInt(req.query.number1) ;
+  let number2 = parseInt(req.query.number2) ;
+  let result = number1 - number2;
+
+  res.send("Result: " + result)
+})
+
 app.post("/sum", (req, res) => {
 
   let number1 = parseInt(req.body.number1) ;
   let number2 = parseInt(req.body.number2) ;
   let result = number1 + number2;
+
+  res.send("Result: " + result)
+})
+
+app.post("/sub", (req, res) => {
+
+  let number1 = parseInt(req.body.number1) ;
+  let number2 = parseInt(req.body.number2) ;
+  let result = number1 - number2;
 
   res.send("Result: " + result)
 })
